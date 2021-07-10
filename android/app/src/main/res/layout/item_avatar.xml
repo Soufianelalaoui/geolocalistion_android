@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="avatar"
+            type="fr.ccm.m1.android.projet.model.Avatar" />
+        <variable
+            name="activity"
+            type="fr.ccm.m1.android.projet.activity.AvatarsSurMonTelActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="0dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/avatar_de"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ageTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ageTextView"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{avatar.nomUtilisateur}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textview1"
+            app:layout_constraintEnd_toStartOf="@+id/activeButton"
+            app:layout_constraintStart_toEndOf="@+id/textview1" />
+
+        <Button
+            android:id="@+id/activeButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="110dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/renvoyer_chez_l_utilisateur"
+            android:onClick="@{() -> activity.renvoyerAvatar(avatar.utilisateurId)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ageTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

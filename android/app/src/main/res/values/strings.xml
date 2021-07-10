@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">mini-jeu collaboratif</string>
+    <string name="connection">Connection :</string>
+    <string name="email">Email</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="compte_existant">compte existent</string>
+    <string name="nouveau_compte">Nouveau compte</string>
+    <string name="d_connexion">Déconnexion</string>
+    <string name="voir_l_historique_des_voyages">Voir l\'historique des voyages de mon avatar</string>
+    <string name="ramener_mon_avatar">Ramener mon avatar</string>
+    <string name="envoyer_mon_avatar">Envoyer mon avatar</string>
+    <string name="changer_les_configs_de_mon_avatar">Configuration de mon avatar</string>
+    <string name="avatars_sur_mon_tel">Liste des avatars sur mon téléphone</string>
+    <string name="localisation_avatar">Localisation avatar</string>
+    <string name="retour"><![CDATA[< Retour]]></string>
+    <string name="utilisateur">Utilisateur :</string>
+    <string name="localisation_de_l_avatar">Localisation de l\'avatar :</string>
+    <string name="en_voyage">En voyage ?</string>
+    <string name="distance_sur_un_t_l_phone_km">Distance sur un téléphone (km) :</string>
+    <string name="fr_quence_de_collecte_de_localisation_minute">fréquence de collecte de localisation (minute) :</string>
+    <string name="temps_du_voyage_minute">Temps du voyage (minute) :</string>
+    <string name="distance_du_voyang_km">Distance du voyang (km) :</string>
+    <string name="temps_sur_un_t_l_phone_minute">Temps sur un téléphone (minute) :</string>
+    <string name="valider_les_modifications">Valider les modifications</string>
+    <string name="renvoyer_chez_l_utilisateur">Renvoyer</string>
+    <string name="avatar_de">Avatar de :</string>
+    <string name="voyage_num_ro">voyage numéro :</string>
+    <string name="voir_itin_raire">Voir itinéraire</string>
+    <string name="date">Date :</string>
+    <string name="adresse">Adresse :</string>
+</resources>

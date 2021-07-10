@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.MenuActivity">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="fr.ccm.m1.android.projet.activity.MenuActivity" />
+
+        <variable
+            name="username"
+            type="java.lang.String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/menu_ramener_avatar_btn"
+        app:layout_constraintTop_toBottomOf="@+id/menu_ramener_avatar_btn">
+
+        <Button
+            android:id="@+id/menu_historique_avatar_btn"
+            android:layout_width="397dp"
+            android:layout_height="88dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="11dp"
+            android:onClick="@{() -> activity.goToHistoriqueVoyages()}"
+            android:text="@string/voir_l_historique_des_voyages"
+            app:layout_constraintBottom_toTopOf="@+id/menu_avatar_sur_tel_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu_change_config_avatar_btn" />
+
+        <Button
+            android:id="@+id/menu_ramener_avatar_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="2dp"
+            android:onClick="@{() -> activity.ramenerAvatar()}"
+            android:text="@string/ramener_mon_avatar"
+            app:layout_constraintBottom_toTopOf="@+id/button7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <Button
+            android:id="@+id/menu_avatar_sur_tel_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="13dp"
+            android:onClick="@{() -> activity.goToAvatarSurMonTel()}"
+            android:text="@string/avatars_sur_mon_tel"
+            app:layout_constraintBottom_toTopOf="@+id/menu_deconnexion_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu_historique_avatar_btn" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="9dp"
+            android:onClick="@{() -> activity.envoyerAvatar()}"
+            android:text="@string/envoyer_mon_avatar"
+            app:layout_constraintBottom_toTopOf="@+id/menu_change_config_avatar_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu_ramener_avatar_btn" />
+
+        <Button
+            android:id="@+id/menu_deconnexion_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="27dp"
+            android:onClick="@{() -> activity.goToLogin()}"
+            android:text="@string/d_connexion"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu_avatar_sur_tel_btn" />
+
+        <Button
+            android:id="@+id/menu_change_config_avatar_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="@{() -> activity.goToConfigAvatar()}"
+            android:text="@string/changer_les_configs_de_mon_avatar"
+            app:layout_constraintBottom_toTopOf="@+id/menu_historique_avatar_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="12dp"
+            android:text="@string/utilisateur"
+            app:layout_constraintBottom_toBottomOf="@+id/userEmail"
+            app:layout_constraintEnd_toStartOf="@+id/userEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/userEmail" />
+
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="10dp"
+            android:text="@{username}"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="297dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="6dp"
+            android:text="@string/localisation_de_l_avatar"
+            app:layout_constraintBottom_toTopOf="@+id/adresseDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userEmail" />
+
+        <TextView
+            android:id="@+id/adresseDescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="14dp"
+            android:text="@{activity.localisationAdresse}"
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="14dp"
+            android:text="@string/en_voyage"
+            app:layout_constraintBottom_toTopOf="@+id/menu_ramener_avatar_btn"
+            app:layout_constraintEnd_toStartOf="@+id/envoyage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adresseDescription" />
+
+        <TextView
+            android:id="@+id/envoyage"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:layout_marginEnd="41dp"
+            android:text="@{activity.enVoyage}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
